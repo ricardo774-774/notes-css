@@ -1,0 +1,60 @@
+
+/*************** Fuentes ***************/
+
+/* Fuente descargada desde google fonts */
+@font-face {
+    font-family: RalewayFontCustom;
+    src: url(../font-raleway/static/Raleway-Regular.ttf);
+}
+
+body{
+    background-color: lightgrey;
+}
+
+/* Aplicando fuente y dando opcion a mas 
+fuentes por si no esta disponible alguna */
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Aplicando fuente y grosor al texto */
+h3{
+    font-family: "Comic Sans Ms";
+    font-weight: lighter;
+}
+
+/* Aplicando fuente con importacion desde html
+desde google fonts */
+.p-fonts-1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+}
+
+/* Fuente descargada aplicada */
+.p-fonts-2{
+    font-family: RalewayFontCustom, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+
+/*************** Colors ***************/
+
+/* Aplicando colores de css por default */
+h1{
+    background-color: SkyBlue;
+}
+
+/* Aplicando colores Hexadecimales */
+h3{
+    background-color: #00FF7F;
+}
+
+/* Aplicando colores RGBA */
+.p-fonts-1{
+    background: rgba(75, 110, 202, .5);
+}
+
+/* Aplicando colores RGB */
+.p-fonts-2{
+    background: rgb(75, 110, 202);
+}

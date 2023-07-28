@@ -1,0 +1,44 @@
+@media (max-width: 1180px) {
+    #content {
+        column-gap: 60px;
+    }
+}
+
+@media (max-width: 1010px) {
+    #webpage{
+        grid-template-areas: 
+            "header header header header header"
+            "aside aside aside aside aside"
+            "body body body body body"
+            "footer footer footer footer footer";
+    }
+
+    #content {
+        column-gap: 10px;
+    }
+}
+
+@media (max-width: 740px) {
+    #header li{
+        display: inline;
+        margin: 10px;
+    }
+
+    #header{
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+    #header h2{
+        margin-bottom: 30px;
+    }
+
+    #footer{
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+    #footer h2{
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,78 @@
+#button{
+    display: block;
+    padding: 20px;
+    background-color: green;
+    color: white;
+    width: 200px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border: 5px solid rgb(2, 77, 2);
+
+    /************** Aplicacion del transition **************/
+    /* La transicion se aplicara a todos los estilos 
+    al segundo 1 */
+    /* transition: all 1s; */
+
+    /* La transicion se aplicara a algunos estilos 
+    en diferentes tiempos */
+    transition: border 1s, background 2s, border-radius 3s ;
+}
+
+#button:hover{
+    border-radius: 15px;
+    background: orangered;
+    border: 5px solid red;
+}
+
+#box{
+    margin-top: 25px;
+    width: 250px;
+    height: 250px;
+    background-color: paleturquoise;
+    border: 5px solid black;
+    font-size: 20px;
+    text-align: center;
+    line-height: 220px;
+
+    /************** Aplicacion del animation **************/
+    animation-name: displacement;
+
+    /* Define la duracion de la animacion */
+    animation-duration: 10s;
+
+    /* Hace infinita la animacion */
+    animation-iteration-count: infinite;
+
+    /* Hace que vaya a la misma velocidad todo el tiempo */
+    animation-timing-function: linear;
+}
+
+
+/* Aplica los estilos de desplazamiento */
+@keyframes displacement{
+    /* Aplica al 0% de la duracion */
+    0%{
+        margin-left: 0px;
+
+        /* Iniciar con rotacion 0 */
+        transform:  rotate(0deg);
+    }
+    /* Aplica al 50% de la duracion */
+    50%{
+        margin-left: 100%;
+        /* Aplicar rotacion de 360° */
+        transform:  rotate(360deg);
+        border-radius: 999px;
+    }
+    75%{
+        background-color: red;
+    }
+    /* Aplica al 100% de la duracion */
+    100%{
+        margin-left: 0px;
+        /* Devuelve la rotacion a 0 */
+        transform:  rotate(0deg);
+    }
+}

@@ -1,0 +1,131 @@
+/*
+
+ ***** Variables *****
+
+*/
+
+$main-font: Arial, Helvetica, sans-serif;
+$main-color: #8A2BE2;
+$second-color: #5b00af;
+$font-color: #FFFFFF;
+
+body{
+    color: $font-color;
+    background-color: $main-color;
+}
+
+h1{
+    font-family: $main-font;
+}
+
+p{
+    background-color: $second-color;
+}
+
+
+/*
+
+ ***** Anidación *****
+
+*/
+
+.box{
+    color: black;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0px auto;
+    text-align: center;
+    padding: 10px;
+
+    h1{
+        background-color: brown;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    p{
+        background-color: cadetblue;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .sub-box{
+        background-color: azure;
+    }
+}
+
+
+/*
+
+ ***** Mixins / Funciones *****
+
+*/
+
+@mixin createBorder($size, $border-color, $shadow){
+    border: $size solid $border-color;
+    border-radius: 10px;
+    box-shadow: 0px 0px $size $shadow;
+}
+
+.box{
+    @include createBorder(5px, green, black);
+}
+
+.list{
+    @include createBorder(7px, red, black);
+}
+
+
+/*
+
+ ***** Herencia *****
+
+*/
+
+%alert-general{
+    border: 1px solid gray;
+    color: white;
+    padding: 1px;
+    margin: 0px auto;
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.alert-successfull{
+    @extend %alert-general;
+    background-color: green;
+}
+
+.alert-danger{
+    @extend %alert-general;
+    background-color: red;
+}
+
+
+/*
+
+ ***** Operadores *****
+
+*/
+
+h1{
+    font-size: 20px + 5px -1px;
+}
+
+
+/*
+
+ ***** Condicionales *****
+
+*/
+
+h1 {
+    @if $main-color == #8A2BE2 {
+        color: black;
+    } @else {
+        color: red;
+    }
+
+    // @else if
+}

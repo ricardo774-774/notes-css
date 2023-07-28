@@ -1,0 +1,374 @@
+/* Fonts */
+
+@font-face {
+    font-family: "nevis";
+    src: url("../assets/fonts/nevis.eot");
+    src: url("../assets/fonts/nevis.eot?#iefix") format("embedded-opentype"),
+        url("../assets/fonts/nevis.woff") format("woff"),
+        url("../assets/fonts/nevis.ttf") format("truetype"),
+        url("../assets/fonts/nevis.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Styles */
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-image: url("../assets/img/paven.png");
+}
+
+a{
+    color: #0C3CCD;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #0C3CCD;
+}
+
+a:hover{
+    color: #001a69;
+}
+
+/* Clean Html */
+.clear-fix{
+    float: none;
+    clear: both;
+}
+
+/* Forms */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select{
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    background: white;
+    padding: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: gray;
+    transition: all 300ms;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus{
+    border: 1px solid #0C3CCD;
+    color: black;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button{
+    color: white;
+    display: block;
+    border-radius: 2px;
+    border: 1px solid #001a69;
+    width: 60px;
+    padding: 3px;
+    background-color: #0C3CCD;
+    cursor: pointer;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover{
+    box-shadow: 0px 0px 6px gray;    
+}
+
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+button:active{
+    box-shadow: 0px 0px 10px gray inset;    
+    box-shadow: 0px 0px 10px #ccc
+}
+
+/* Header */
+
+#header{
+    min-width: 1024px;
+    width: 100%;
+    height: 250px;
+    margin: 0px auto;
+}
+
+#header a{
+    text-decoration: none;
+}
+
+#header #logo{
+    width: 770px;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+
+#header #logo img{
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+    width: 140px;
+}
+
+#header h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: "nevis";
+    text-shadow: 0px 2px 1px #333333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    word-spacing: 5px;
+    transition: all 300ms;
+}
+
+#header h1:hover{
+    text-shadow: 0px 2px 1px #333333, 0px 0px 3px #0C3CCD;
+}
+
+#header h1 a{
+    color: #0C3CCD;
+}
+
+/* Nav */
+
+#nav{
+    width: 100%;
+    background-color: #333333;
+    color: white;
+    height: 40px;
+    font-family: sans-serif, Helvetica, Arial;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
+}
+
+#nav ul{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    width: 66%;
+}
+
+#nav > ul > li{
+    line-height: 40px;
+    float: left;
+    border-right: 1px solid gray;
+    transition: all 300ms;
+}
+
+#nav > ul > li:hover{
+    background-color: #0C3CCD;
+    box-shadow: 0px 0px 4px #001a69 inset;
+}
+
+#nav > ul > li a{
+    display: block;
+    padding-left: 20px;
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav > ul > li:first-child > a{
+    border-left: 1px solid gray;
+}
+
+/* Dropdown Menu */
+
+#nav > ul > li > ul {
+    display: none;
+    position: absolute;
+    width: 135px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1;
+}
+
+#nav > ul > li:hover > ul{
+    display: block;
+}
+
+#nav > ul > li:hover > ul > li{
+    background-color: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: 300ms;
+}
+
+#nav > ul > li:hover > ul > li > a{
+    color: #666666;
+}
+
+#nav > ul > li:hover > ul > li:hover{
+    background: #ccc;
+}
+
+/* Content */
+
+#content{
+    width: 90%;
+    min-height: 1100px;
+    margin: 0px auto;
+}
+
+/* Aside */
+
+#aside, aside{
+    width: 200px;
+    float: left;
+    margin: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+#aside .widget{
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #333333;
+}
+
+#aside .widget a{
+    display: block;
+}
+
+#aside .widget:last-child{
+    margin-bottom: 0px;
+}
+
+#aside h3{
+    color: #333333;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    background-color: #f2f3f2;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+}
+
+#aside li{
+    margin-top: 8px;
+    margin-top: 5px;
+    margin-left: 20px;
+    list-style: circle;
+}
+
+/* Form Aside */
+
+#aside div label,
+#aside div input[type="text"],
+#aside div input[type="email"],
+#aside div input[type="password"],
+#aside div a {
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#aside div input[type="button"],
+#aside div input[type="submit"],
+#aside div button{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#aside input,
+#aside label{
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Aside Frase */
+
+#frase{
+    width: 180px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+/* Sections */
+
+#sections{
+    float: right;
+    width: 75%;
+    font-family: sans-serif;
+    margin-left: 20px;
+}
+
+#sections section{
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    color: #333333;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+#sections section h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: nevis;
+    font-weight: normal;
+    letter-spacing: .8px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#sections .article{
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#sections .date{
+    color: gray;
+    font-size: 14px;
+}
+
+/* History */
+#history{
+    float: right;
+    margin-top: 20px;
+    margin-right: 15px;
+    font-family: sans-serif;
+}
+
+/* Footer */
+#footer{
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 80px;
+    background-color: #333333;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
+}

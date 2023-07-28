@@ -1,0 +1,172 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#main{
+    width: 1200px;
+    margin: 0px auto;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+#header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(26, 164, 143);
+    text-align: center;
+    line-height: 90px;
+}
+
+#menu {
+    background: lightgray;
+}
+
+#menu ul li{
+    display: block;
+    float: left;
+    border-right: 1px solid #ccc;
+}
+
+#menu ul li a{
+    display: block;
+    padding: 15px;
+    color: #444;
+}
+
+#menu ul li:hover{
+    background-color: rgb(18, 111, 97);
+    cursor: pointer;
+}
+
+#menu ul li:hover a{
+    color: white;
+}
+
+.clear-fix{
+    float: none;
+    clear: both;
+}
+
+#content{
+    width: 70%;
+    float: left;
+}
+
+#lateral{
+    width: 29.5%;
+    border: 1px solid;
+    float: right;
+    display: inline;
+    min-height: 500px;
+    max-height: 650px;
+    text-align: center;
+    /************** Aplicacion del overflow **************/
+    /* El contenido de texto que salga de la caja
+    va a desaparecer */
+    overflow: hidden;
+
+    /************** Aplicacion del overflow **************/
+    /* El contenido de texto que salga de la caja
+    va a poder ser visible con scroll, pero
+    así aplicará scroll e eje x y y */
+    overflow: scroll;
+
+    /* El contenido de texto que salga de la caja
+    va a poder ser visible con scroll, pero
+    solo aplicará scroll al eje y */
+    overflow-y: scroll;
+}
+
+#content .box{
+    width: 40%;
+    height: 250px;
+    background-color: rebeccapurple;
+    border: 5px solid black;
+    color: black;
+    float: left;
+    margin: 20px;
+    margin-left: 40px;
+    text-align: center;
+    line-height: 210px;
+    box-shadow: 1px 1px 15px gray;
+    border-radius: 50px;
+    border-radius: 10px 40px 10px 40px;    
+}
+
+#box-intern{
+    box-shadow: 0px 0px 20px black inset !important;
+}
+
+#content > h1{
+    text-align: center;
+    border-bottom: #ccc;
+    padding: 15px;
+    color: #444;
+    text-shadow: 1px 1px 5px gray;
+}
+
+#footer{
+    width: 100%;
+    height: 50px;
+    line-height: 55px;
+    background: #eee;
+    text-align: center;
+    color: #444;
+    border-top: 1px solid #ccc;
+}
+
+.free{
+    /************** Aplicacion del position **************/
+    position: absolute;
+
+    /* Mueve la caja arriba en un 50% de la pantalla */
+    top: 50%;
+
+    /* Mueve la caja a la izquierda en un 50% de la pantalla */
+    left: 50%;
+
+    /* Indica que caja tiene mayor prioridad 
+    entre mas alto el numero, mayor es la prioridad */
+    z-index: 2;
+
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}
+
+.free2{
+    /************** Aplicacion del position absolute **************/
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    z-index: 1;
+
+    border: 1px solid black;
+    background-color: green;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}
+
+.fix{
+    /************** Aplicacion del position fixed **************/
+    /* Nos mantiene el elemento fijo al scroll */
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    z-index: 4;
+
+    border: 1px solid black;
+    background-color: blue;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}

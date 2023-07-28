@@ -1,0 +1,115 @@
+@charset "UTF-8";
+h1 {
+  text-decoration: underline;
+}
+
+/*
+
+ ***** Variables *****
+
+*/
+body {
+  color: #FFFFFF;
+  background-color: #8A2BE2;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  background-color: #5b00af;
+}
+
+/*
+
+ ***** Anidación *****
+
+*/
+.box {
+  color: black;
+  border: 1px solid black;
+  width: 50%;
+  margin: 0px auto;
+  text-align: center;
+  padding: 10px;
+}
+.box h1 {
+  background-color: brown;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.box p {
+  background-color: cadetblue;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.box .sub-box {
+  background-color: azure;
+}
+
+/*
+
+ ***** Mixins / Funciones *****
+
+*/
+.box {
+  border: 5px solid green;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px black;
+}
+
+.list {
+  border: 7px solid red;
+  border-radius: 10px;
+  box-shadow: 0px 0px 7px black;
+}
+
+/*
+
+ ***** Herencia *****
+
+*/
+.alert-danger, .alert-successfull {
+  border: 1px solid gray;
+  color: white;
+  padding: 1px;
+  margin: 0px auto;
+  margin-top: 20px;
+  width: 80%;
+  text-align: center;
+}
+
+.alert-successfull {
+  background-color: green;
+}
+
+.alert-danger {
+  background-color: red;
+}
+
+/*
+
+ ***** Operadores *****
+
+*/
+h1 {
+  font-size: 25px -1px;
+}
+
+/*
+
+ ***** Condicionales *****
+
+*/
+h1 {
+  color: black;
+}
+
+/*
+
+ ***** Modulos *****
+
+*/
+
+/*# sourceMappingURL=style.css.map */

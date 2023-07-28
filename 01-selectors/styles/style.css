@@ -1,0 +1,102 @@
+/*
+############# SELECTORES #############
+*/
+
+/*Selector Universal*/
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Selector de Etiqueta*/
+h1{
+    color: darkcyan;
+    background-color: antiquewhite;
+}
+footer a{
+    color: red;
+    text-decoration: none;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Selector de Id*/
+#description, #title{
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+/*Selector de Clase*/
+.list{
+    font-size: large;
+}
+.paragraph-1{
+    font-weight: bold;
+    background-color: green;
+    color: white;
+}
+.paragraph-2{
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: orange;
+}
+
+/*Selector de Atributo x[]*/
+
+#user form{
+    border: 2px solid;
+    padding: 10px;
+    margin: 10px;
+}
+#user form *{
+    display: block;
+    margin: 15px;
+    display: flex;
+}
+input[type="text"]{
+    width: 200px;
+    height: 30px;
+}
+input[type="submit"]{
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border: 1px black;
+    cursor: pointer;
+}
+
+/*Selector de Hijo x[]*/
+
+#menu > li > a{
+    text-decoration: none;
+    font-size: large;
+    color: red;
+}
+
+
+
+
+/*
+############# PRIORIDAD #############
+*/
+
+h1{
+    color: white;
+    background: purple;
+}
+
+#title h1{
+    background-color: darkgreen;
+}
+
+#title{
+    background-color: red;
+}
+
+h1 {
+    background-color: blue !important;
+}
+
+

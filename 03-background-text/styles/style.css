@@ -1,0 +1,67 @@
+/*************** Fondos ***************/
+
+body{
+    background-color: lightgray;
+    color: white;
+
+    /* Aquí se añade la ubicacion de la imagen de fondo */
+    background-image: url("../assets/planet-universe-jupiter-juno-wallpaper-preview.jpg");
+
+    /* Sirve para qu el fondo no se repita*/
+    background-repeat: no-repeat;
+
+    /* Nos ayuda para adaptar el tamaño de la imagen */
+    background-size: 100% 100%;
+
+    /* Nos ayuda a que el fondo permanezca 
+    fijo cuando se utiliza el scroll */
+    background-attachment: fixed;
+
+    /* Pocisiona la imagen a donde se indique */
+    background-position: left bottom;
+}
+
+.box{
+    border: 5px solid black;
+    padding: 10px;
+    background-color: rebeccapurple;
+    background-image: url("../assets/space-earth-planet-nasa-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p{
+    font-size: 30px;
+}
+
+/*************** Texto ***************/
+
+.box{
+    /* Modifica el color al texto */
+    color: purple;
+
+    /* Modifica el estilo de fuente al texto */
+    font-family: 'Courier New', Courier, monospace;
+
+    /* Modifica la ubicacion del texto,
+    en este caso se cetra */
+    text-align: center;
+
+    /* Modifica el espacio entre cada renglon */
+    line-height: 50px;
+
+    /* Transforma el texto como se necesite,
+    en este caso en mayusculas */
+    text-transform: uppercase;
+
+    /* Subraya el texto como se necesite */
+    text-decoration: overline underline;
+}
+
+.text{
+    /* Modifica el espacio entre las palablas */
+    word-spacing: 25px;
+
+    /* Modifica el espacio entre las letras */
+    letter-spacing: 1px;
+}

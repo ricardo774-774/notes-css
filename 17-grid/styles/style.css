@@ -1,0 +1,249 @@
+/* Generals */
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+/****************** Parte 1 ******************/
+.layout{
+    width: 98%;
+    height: 400px;
+    padding: 5px;
+    border: 4px solid black;
+
+    /* Inicializa grid en div layout */
+    display: grid;
+
+    /* Genera margen unicamente entre los elementos */
+    grid-gap: 1%;
+    /* grid-row-gap: 10px;
+    grid-column-gap: 10px; */
+
+    /* Genera columnas, cada numero declarado es una columna */
+    grid-template-columns: 15% 20% 25% 30%;
+
+    /* Genera todas las columnas con el mismo tamaño */
+    grid-template-columns: repeat(4, 24.26%);
+    /* Nos ayuda a facilitar el responsive */
+    /* grid-template-columns: repeat(auto-fill, 200px); */
+
+    /* Genera 2 columnas del mismo tamaño */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Genera 3 Filas*/
+    grid-template-rows: 1fr 2fr 1fr;
+
+    /* Genera 3 Filas cada una con un tamaño especificado, adaptandose al 100% del height*/
+    grid-template-rows: 45% 30% 15%;
+
+    /* Genera 4 Filas con el mismo tamaño cada una*/
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.box{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    border: 3px solid #222;
+}
+
+.red{
+    background-color: rgb(223, 20, 20);
+
+    /* Expandir columna desde la linea 1 a la 3 */
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    /* Tambien expande columna desde la linea 1 a la 3 */
+    grid-column: 1 / 4;
+}
+
+.green{
+    background-color: rgb(19, 193, 19);
+
+    /* Expandir fila desde la linea 2 a la 4 */
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    /* Tambien expande la fila desde la linea 2 a la 4 */
+    grid-row: 2 / 5;
+}
+
+.purple{
+    background-color: rgb(180, 6, 180);
+    grid-column: 2 / 4;
+}
+
+.orange{
+    background-color: rgb(245, 161, 6);
+}
+
+.blue{
+    background-color: rgb(111, 194, 227);
+}
+
+.pink{
+    background-color: rgb(238, 173, 184);
+    grid-column: 2 / 4;
+}
+
+
+/****************** Parte 2 ******************/
+
+#website{
+    width: 75%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid #ccc;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 20% 10% 60% 10%;
+}
+
+#header{
+    background-color: cadetblue;
+
+    grid-column: 1 / 6;
+
+    /**************** Centrar el contenido de manera horizontal con grid ****************/
+    text-align: center;
+
+    /**************** Centrar el contenido de manera vertical felx ****************/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu{
+    background-color: rgb(185, 207, 248);
+
+    grid-column: 1 / 6;
+}
+
+#menu ul{
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0;
+    margin-top: 20px;
+}
+
+#menu li{
+    list-style: none;
+}
+
+#lateral{
+    background-color: rgb(161, 213, 161);
+
+}
+
+#section{
+    background-color: rgb(193, 246, 246);
+    padding: 10px;
+
+    grid-column: 2 / 6;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+#section article{
+    background-color: rgb(246, 193, 217);
+    border: .5px solid #000000;
+}
+
+#footer{
+    background-color: rgb(222, 192, 251);
+
+    grid-column: 1 / 6;
+}
+
+
+/****************** Parte 3 ******************/
+
+#website-2{
+    width: 75%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid #ccc;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 20% 10% 60% 10%;
+
+
+    /*************** Declarando grid-template-areas ***************/
+    grid-template-areas: 
+     "header header header header header"
+     "menu menu menu menu lateral"
+     "section section section section lateral"
+     "footer footer footer footer footer";
+}
+
+#header-2{
+    background-color: cadetblue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*************** Utilizando area declarada ***************/
+    grid-area: header;
+}
+
+#menu-2{
+    background-color: rgb(185, 207, 248);
+
+    /*************** Utilizando area declarada ***************/
+    grid-area: menu;
+}
+
+#menu-2 ul{
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0;
+    margin-top: 20px;
+}
+
+#menu-2 li{
+    list-style: none;
+}
+
+#lateral-2{
+    background-color: rgb(161, 213, 161);
+
+    /*************** Utilizando area declarada ***************/
+    grid-area: lateral;
+}
+
+#section-2{
+    background-color: rgb(193, 246, 246);
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+
+    /*************** Utilizando area declarada ***************/
+    grid-area: section;
+}
+
+#section-2 article{
+    background-color: rgb(246, 193, 217);
+    border: .5px solid #000000;
+}
+
+#footer-2{
+    background-color: rgb(222, 192, 251);
+
+    /*************** Utilizando area declarada ***************/
+    grid-area: footer;
+}
